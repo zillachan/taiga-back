@@ -143,5 +143,9 @@ router.register(r"gitlab-hook", GitLabViewSet, base_name="gitlab-hook")
 from taiga.hooks.bitbucket.api import BitBucketViewSet
 router.register(r"bitbucket-hook", BitBucketViewSet, base_name="bitbucket-hook")
 
+# Gogs webhooks
+from taiga.hooks.gogs.api import GogsViewSet
+router.register(r"gogs-hook", GogsViewSet, base_name="gogs-hook")
+
 # feedback
 #   - see taiga.feedback.routers and taiga.feedback.apps
