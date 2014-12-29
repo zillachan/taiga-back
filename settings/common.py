@@ -201,6 +201,7 @@ INSTALLED_APPS = [
     "rest_framework",
     "djmail",
     "django_jinja",
+    "django_jinja.contrib._humanize",
     "easy_thumbnails",
     "raven.contrib.django.raven_compat",
 ]
@@ -369,3 +370,6 @@ if "test" in sys.argv:
     print ("\033[1;91mNo django tests.\033[0m")
     print ("Try: \033[1;33mpy.test\033[0m")
     sys.exit(0)
+
+EXPORTS_TTL = 60 * 60 * 24  # 24 hours
+CELERY_ENABLED = False
