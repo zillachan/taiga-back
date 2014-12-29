@@ -147,6 +147,9 @@ MIDDLEWARE_CLASSES = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
+
+    # Cleanup of files
+    "django_cleanup.middleware.CleanupMiddleware",
 ]
 
 TEMPLATE_CONTEXT_PROCESSORS = [
@@ -203,7 +206,10 @@ INSTALLED_APPS = [
     "django_jinja",
     "easy_thumbnails",
     "raven.contrib.django.raven_compat",
+    "django_cleanup",
 ]
+
+DJANGO_CLEANUP_DELETE_ON_MIDDLEWARE = True
 
 WSGI_APPLICATION = "taiga.wsgi.application"
 
