@@ -31,7 +31,7 @@ class TagsField(serializers.WritableField):
     def from_native(self, data):
         if not data:
             return data
-            
+
         ret = sum([tag.split(",") for tag in data], [])
         return ret
 
